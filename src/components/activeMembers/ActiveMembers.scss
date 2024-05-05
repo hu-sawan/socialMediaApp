@@ -1,0 +1,8 @@
+.active-members {
+    display: flex;
+    align-items: center;
+
+    &__count {
+        line-height: 2;
+    }
+}

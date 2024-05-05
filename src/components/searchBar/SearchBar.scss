@@ -1,0 +1,27 @@
+.search-bar {
+    position: relative;
+    color: var(--secondary-text-color);
+    width: 40%;
+
+    input {
+        background-color: transparent;
+        padding: 5px 0px 5px 25px;
+        caret-color: var(--primary-color);
+        color: var(--primary-text-color);
+        font-size: 14px;
+        width: 100%;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .magnifier-icon {
+        position: absolute;
+        font-size: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 5px;
+    }
+}

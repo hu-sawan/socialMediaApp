@@ -1,0 +1,31 @@
+.groups-section {
+    .groups {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            .group__name {
+                font-size: 1.2rem;
+            }
+
+            .group__members {
+                display: flex;
+                gap: 10px;
+            }
+
+            .group__actions {
+                display: flex;
+                gap: 10px;
+            }
+        }
+    }
+}
