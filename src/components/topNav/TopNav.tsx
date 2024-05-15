@@ -1,6 +1,21 @@
 import SearchBar from "../searchBar/SearchBar";
 import "./TopNav.scss";
 
+const links = [
+    {
+        name: "Discuss",
+        url: "/discuss",
+    },
+    {
+        name: "Discover",
+        url: "/discover",
+    },
+    {
+        name: "Events",
+        url: "/events",
+    },
+];
+
 function TopNav() {
     return (
         <header className="top-nav">
@@ -10,10 +25,16 @@ function TopNav() {
             <SearchBar />
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Contact</li>
+                    {links.map((link, idx) => (
+                        <a
+                            href={link.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            key={idx}
+                        >
+                            <li>{link.name}</li>
+                        </a>
+                    ))}
                 </ul>
             </nav>
         </header>

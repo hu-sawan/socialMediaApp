@@ -1,2 +1,14 @@
 .home-section {
+    position: relative;
+
+    &__tabs {
+        display: flex;
+        gap: 10px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        position: sticky;
+        top: 0;
+        background-color: var(--primary-background-color);
+    }
 }

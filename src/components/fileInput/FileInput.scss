@@ -1,0 +1,30 @@
+.input-wrapper {
+    &.contain-file {
+        label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: fit-content;
+            text-transform: capitalize;
+            gap: 10px;
+            color: var(--primary-text-color);
+            color: var(--primary-text-color);
+            cursor: pointer;
+            transition: 0.3s all ease-in-out;
+        }
+        input[type="file"] {
+            display: none;
+            height: 0.1px;
+            width: 0.1px;
+            position: absolute;
+            overflow: hidden;
+            z-index: -1;
+            opacity: 0;
+        }
+        .message {
+            color: var(--primary-text-color);
+            font-size: 12px;
+            margin-top: 2px;
+        }
+    }
+}

@@ -17,11 +17,22 @@
     }
 
     nav {
+        width: calc(25vw - 40px);
         ul {
             color: var(--secondary-text-color);
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 10px;
+
+            a {
+                cursor: pointer;
+                font-weight: 500;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: var(--primary-text-color);
+                }
+            }
         }
     }
 }

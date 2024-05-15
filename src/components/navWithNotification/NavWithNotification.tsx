@@ -1,6 +1,6 @@
 import { ReactNode, useState } from "react";
 import "./NavWithNotification.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 interface NavWithNotificationProps {
     icon: ReactNode;
@@ -18,7 +18,12 @@ function NavWithNotification({
     const [notificationCount, setNotificationCount] = useState<number>(0);
     return (
         <li className="nav-with-notification__li">
-            <Link to="/groups">
+            <NavLink
+                to={href}
+                className={({ isActive, isPending }) =>
+                    isActive ? "active" : ""
+                }
+            >
                 <div className="nav-with-notification__li__display">
                     {icon}
                     <span>{text}</span>
@@ -28,7 +33,7 @@ function NavWithNotification({
                         <span>{notificationCount}</span>
                     </div>
                 )}
-            </Link>
+            </NavLink>
         </li>
     );
 }

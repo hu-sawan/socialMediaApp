@@ -16,18 +16,21 @@
         ul {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
 
             a {
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
+                gap: 10px;
+
+                &.active {
+                    color: var(--primary-color);
+                }
             }
         }
     }
 
     &__profile {
-        margin-top: 10px;
         display: flex;
         gap: 10px;
         align-items: center;
@@ -44,14 +47,70 @@
                 object-fit: cover;
             }
         }
+
+        span {
+            line-height: 100%;
+        }
+    }
+
+    &__footer {
+        width: 90%;
+        margin: 0 auto;
+
+        &__toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--primary-text-color);
+
+            .switch {
+                position: relative;
+                height: 20px;
+
+                input {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    position: absolute;
+
+                    &:checked + .slider {
+                        &::before {
+                            background-color: var(--primary-color);
+                            left: 22px;
+                        }
+                    }
+                }
+
+                .slider {
+                    display: inline-block;
+                    width: 40px;
+                    height: 20px;
+                    background-color: var(--secondary-background-color);
+                    border-radius: 16px;
+                    transition: 0.3s;
+                    position: relative;
+                    cursor: pointer;
+
+                    &::before {
+                        content: "";
+                        background-color: var(--secondary-text-color);
+                        width: 16px;
+                        height: 16px;
+                        position: absolute;
+                        border-radius: 50%;
+                        top: 2px;
+                        left: 2px;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
     }
 
     hr {
-        width: 90%;
-        margin: auto;
         height: 1px;
+        width: 100%;
         border: none;
         background-color: var(--secondary-text-color);
-        margin: 10px 0;
+        margin: 10px auto;
     }
 }
